@@ -5,9 +5,12 @@ A log to keep track of the developer tools, software and installation guides use
 ### WSL2 - Ubuntu 64-bit 22.04 LTS on Windows 10 Home Edition
 [Installation video on Youtube](https://www.youtube.com/watch?v=1ap3hL-UR9I)
 ### Development Essentials
-- NodeJS v12.22.9 and npm v8.5.1 `sudo apt install nodejs && sudo apt install npm`
+- NodeJS v21 [NodeJS Collection](https://github.com/nodesource/distributions#installation-instructions) ```curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs```
 
-[NodeJS and npm Installation Guide](https://www.hostinger.com/tutorials/how-to-install-node-ubuntu?ppc_campaign=google_search_generic_hosting_all&bidkw=defaultkeyword&lo=9062548&gad_source=1&gclid=CjwKCAjw7-SvBhB6EiwAwYdCAUvfJ0Tg9ddFReM4HACjmKJM-HASTYRalrGYdlicyvnCLcaGuA1nAxoCP8AQAvD_BwE)
+
+- npm v8.5.1 `sudo apt install npm`
+- Typescript v 5.4.1 `sudo npm i -g typescript`
 
 - Git v2.34.1 and Github
 SSH Key Integration Steps (taken from [Github's guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)):
