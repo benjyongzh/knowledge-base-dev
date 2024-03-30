@@ -58,8 +58,13 @@ Used for Java.
 ## Software
 ### Docker Desktop v4.28.0
 - [Installation Doc for Windows](https://docs.docker.com/desktop/install/windows-install/)
-- [What is Docker and how is it used](https://www.youtube.com/watch?v=Nm1tfmZDqo8)
-- [How to create Docker Image](https://www.youtube.com/watch?v=EKaGsShRXNY)
+- What is Docker and how is it used [YouTube 1](https://www.youtube.com/watch?v=Nm1tfmZDqo8) [YouTube 2](https://www.youtube.com/watch?v=pg19Z8LL06w&list=PLoRikNuYMkcBolm6Tfmj3L3-YmkDMzP89&index=9)
+- [Docker cheatsheet/docs](https://www.squash.io/docker-how-to-workdir-run-cmd-env-variables/#:~:text=The%20WORKDIR%20command%20in%20Docker,Docker%20container%20is%20set%20to%20%2F%20.)
+- [How to create Docker Image (YouTube)](https://www.youtube.com/watch?v=EKaGsShRXNY)
+- [Docker compose](https://www.youtube.com/watch?v=SXwC9fSwct8&list=PLoRikNuYMkcBolm6Tfmj3L3-YmkDMzP89&index=10)
+- [env files, buildtime vs runtime for Docker and NextJS](https://www.saltycrane.com/blog/2021/04/buildtime-vs-runtime-environment-variables-nextjs-docker/#setting-dynamic-buildtime-environment-variables-that-are-available-at-runtime-also)
 ### Jira
 - [Youtube Guide for Integration with Github](https://www.youtube.com/watch?v=u6RsQmlX4j0)
 - [How to use Jira as a Developer](https://www.youtube.com/watch?v=pLLH0dVFDvc)
+### Jenkins
+- [Install and run Jenkins as a Docker image](https://octopus.com/blog/jenkins-docker-install-guide)
