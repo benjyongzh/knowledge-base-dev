@@ -3,7 +3,7 @@ A log to keep track of the developer tools, software and installation guides use
 
 ## Environment
 ### WSL2 - Ubuntu 64-bit 22.04 LTS on Windows 10 Home Edition
-[Installation video on Youtube](https://www.youtube.com/watch?v=1ap3hL-UR9I)
+Installation video on [YouTube](https://www.youtube.com/watch?v=1ap3hL-UR9I)
 ### Development Essentials
 - NodeJS v21 [NodeJS Collection](https://github.com/nodesource/distributions#installation-instructions) ```curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs```
@@ -26,9 +26,9 @@ SSH Key Integration Steps (taken from [Github's guide](https://docs.github.com/e
 - btop
 - tldr
 ### VMWare Workstation 17 Player - Ubuntu 64-bit 22.04 LTS
-[Download Link for VMWare](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html.html)
+[Download Link](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html.html) for VMWare
 
-[Download Link for Ubuntu image](https://ubuntu.com/download/desktop)
+[Download Link](https://ubuntu.com/download/desktop) for Ubuntu image
 
 ## IDE
 ### Visual Studio Code
@@ -57,14 +57,17 @@ Used for Java.
 
 ## Software
 ### Docker Desktop v4.28.0
-- [Installation Doc for Windows](https://docs.docker.com/desktop/install/windows-install/)
-- What is Docker and how is it used [YouTube 1](https://www.youtube.com/watch?v=Nm1tfmZDqo8) [YouTube 2](https://www.youtube.com/watch?v=pg19Z8LL06w&list=PLoRikNuYMkcBolm6Tfmj3L3-YmkDMzP89&index=9)
+- [Installation Doc](https://docs.docker.com/desktop/install/windows-install/) for Windows
+- What is Docker and how is it used [YouTube video 1](https://www.youtube.com/watch?v=Nm1tfmZDqo8), [YouTube video 2](https://www.youtube.com/watch?v=pg19Z8LL06w&list=PLoRikNuYMkcBolm6Tfmj3L3-YmkDMzP89&index=9)
 - [Docker cheatsheet/docs](https://www.squash.io/docker-how-to-workdir-run-cmd-env-variables/#:~:text=The%20WORKDIR%20command%20in%20Docker,Docker%20container%20is%20set%20to%20%2F%20.)
-- [How to create Docker Image (YouTube)](https://www.youtube.com/watch?v=EKaGsShRXNY)
-- [Docker compose](https://www.youtube.com/watch?v=SXwC9fSwct8&list=PLoRikNuYMkcBolm6Tfmj3L3-YmkDMzP89&index=10)
+- How to create Docker Image [YouTube video](https://www.youtube.com/watch?v=EKaGsShRXNY)
+- Docker compose Introduction [YouTube video](https://www.youtube.com/watch?v=SXwC9fSwct8&list=PLoRikNuYMkcBolm6Tfmj3L3-YmkDMzP89&index=10)
 - [env files, buildtime vs runtime for Docker and NextJS](https://www.saltycrane.com/blog/2021/04/buildtime-vs-runtime-environment-variables-nextjs-docker/#setting-dynamic-buildtime-environment-variables-that-are-available-at-runtime-also)
 ### Jira
-- [Youtube Guide for Integration with Github](https://www.youtube.com/watch?v=u6RsQmlX4j0)
-- [How to use Jira as a Developer](https://www.youtube.com/watch?v=pLLH0dVFDvc)
+- Guide for Integration with Github [Youtube video](https://www.youtube.com/watch?v=u6RsQmlX4j0)
+- How to use Jira as a Developer [YouTube video](https://www.youtube.com/watch?v=pLLH0dVFDvc)
 ### Jenkins
 - [Install and run Jenkins as a Docker image](https://octopus.com/blog/jenkins-docker-install-guide)
+### makefile
+`sudo apt install make`
+- Using makefile for Docker [YouTube video](https://www.youtube.com/watch?v=44EqIY7v5xM)
