@@ -67,6 +67,10 @@ Used for Java.
   - `docker run -d -p 8080:8080 -p 50000:50000 --name jenkinsMaster -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts-jdk11`
   - [Octopus Guide](https://octopus.com/blog/jenkins-docker-install-guide)
   - [Medium Guude](https://medium.com/@yassine.essadraoui_78000/jenkins-docker-in-docker-b7630c7b9364)
+  - Plugins
+    - Docker
+    - Docker Pipeline
+    - Docker Commons 
 - Jenkins Slave on Docker
   - `docker pull jenkins/agent`
   - [Medium Guude](https://medium.com/@yassine.essadraoui_78000/jenkins-docker-in-docker-b7630c7b9364)
