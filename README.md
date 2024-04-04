@@ -63,6 +63,13 @@ Used for Java.
 - How to create Docker Image [YouTube video](https://www.youtube.com/watch?v=EKaGsShRXNY)
 - Docker compose Introduction [YouTube video](https://www.youtube.com/watch?v=SXwC9fSwct8&list=PLoRikNuYMkcBolm6Tfmj3L3-YmkDMzP89&index=10)
 - [env files, buildtime vs runtime for Docker and NextJS](https://www.saltycrane.com/blog/2021/04/buildtime-vs-runtime-environment-variables-nextjs-docker/#setting-dynamic-buildtime-environment-variables-that-are-available-at-runtime-also)
+
+
+### Jira
+- Guide for Integration with Github [Youtube video](https://www.youtube.com/watch?v=u6RsQmlX4j0)
+- How to use Jira as a Developer [YouTube video](https://www.youtube.com/watch?v=pLLH0dVFDvc)
+### Jenkins
+- [Install and run Jenkins as a Docker image](https://octopus.com/blog/jenkins-docker-install-guide)
 - Jenkins Master on Docker
   - `docker run -d -p 8080:8080 -p 50000:50000 --name jenkinsMaster -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts-jdk11`
   - [Octopus Guide](https://octopus.com/blog/jenkins-docker-install-guide)
@@ -75,11 +82,6 @@ Used for Java.
   - `docker pull jenkins/agent`
   - [Medium Guude](https://medium.com/@yassine.essadraoui_78000/jenkins-docker-in-docker-b7630c7b9364)
 
-### Jira
-- Guide for Integration with Github [Youtube video](https://www.youtube.com/watch?v=u6RsQmlX4j0)
-- How to use Jira as a Developer [YouTube video](https://www.youtube.com/watch?v=pLLH0dVFDvc)
-### Jenkins
-- [Install and run Jenkins as a Docker image](https://octopus.com/blog/jenkins-docker-install-guide)
 ### makefile
 `sudo apt install make`
 - Using makefile for Docker [YouTube video](https://www.youtube.com/watch?v=44EqIY7v5xM)
