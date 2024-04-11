@@ -14,9 +14,9 @@ sudo apt-get install -y nodejs```
 
 - Git v2.34.1 and Github
 SSH Key Integration Steps (taken from [Github's guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys)):
-1. `ls -al ~/.ssh` to check for any existing keys
-2. `ssh-keygen -t ed25519 -C "<your-email-here>"` to create new ssh key (press Enter until clear)
-3. `cat ~/.ssh/id_ed25519.pub` to list out string to copy into Github for authentication
+  1. `ls -al ~/.ssh` to check for any existing keys
+  2. `ssh-keygen -t ed25519 -C "<your-email-here>"` to create new ssh key (press Enter until clear)
+  3. `cat ~/.ssh/id_ed25519.pub` to list out string to copy into Github for authentication
 
 
 ### Bash CLI tools
@@ -83,8 +83,6 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 - [Installation Doc](https://docs.docker.com/engine/install/ubuntu/) for Ubuntu 64-bit
-- Docker hostname `host.docker.internal`
-- Docker Host URI `unix: ///var/run/docker.sock` based on [Stack Overflow](https://stackoverflow.com/questions/47709208/how-to-find-docker-host-uri-to-be-used-in-jenkins-docker-plugin)
 - Basic docker commands:
 ```
 //show running containers
@@ -130,6 +128,8 @@ docker inspect <network or container or image>
   - Docker-in-Docker guide on [Medium](https://medium.com/@yassine.essadraoui_78000/jenkins-docker-in-docker-b7630c7b9364)
 - Jenkins Pipeline Syntax [Doc](https://www.jenkins.io/doc/book/pipeline/)
 - Groovy Syntax [Doc](https://groovy-lang.org/syntax.html#_string_interpolation)
+- Docker hostname `host.docker.internal` or `172.17.0.1`
+- Docker Host URI `unix: ///var/run/docker.sock` based on [Stack Overflow](https://stackoverflow.com/questions/47709208/how-to-find-docker-host-uri-to-be-used-in-jenkins-docker-plugin)
 
 ### makefile
 `sudo apt install make`
