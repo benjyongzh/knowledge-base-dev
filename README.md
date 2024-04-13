@@ -20,14 +20,29 @@ SSH Key Integration Steps (taken from [Github's guide](https://docs.github.com/e
   1. `ls -al ~/.ssh` to check for any existing keys
   2. `ssh-keygen -t ed25519 -C "<your-email-here>"` to create new ssh key (press Enter until clear)
   3. `cat ~/.ssh/id_ed25519.pub` to list out string to copy into Github for authentication
+ 
+- zrok.io
+Enables publicizing localhost URLs so anyone on the internet can reach your localhost port via tunneling
+  - Installation:
+    1. Go to https://github.com/openziti/zrok/releases/tag/v0.4.26, copy the arm64.tar.gz URL
+    2. On linux `/` directory, `wget <url>`
+    3. `mkdir /tmp/zrok && tar -xf ./zrok*linux*.tar.gz -C /tmp/zrok`
+    4. `install /tmp/zrok/zrok ~/usr/bin/`
+    5. `PATH=~/usr/bin:$PATH`
+    6. `zrok version`
+
 
 
 ### Bash CLI tools
 `sudo apt install <tool name>`
 - net-tools
+  - networking for linux
 - neofetch
+  - get system/OS specs
 - btop
+  - see live info on RAM/storage/processes
 - tldr
+  - like a "--help", but not always applicable
 ### VMWare Workstation 17 Player - Ubuntu 64-bit 22.04 LTS
 [Download Link](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html.html) for VMWare
 
