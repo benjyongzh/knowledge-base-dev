@@ -5,8 +5,11 @@ A log to keep track of the developer tools, software and installation guides use
 ### WSL2 - Ubuntu 64-bit 22.04 LTS on Windows 10 Home Edition
 Installation video on [YouTube](https://www.youtube.com/watch?v=1ap3hL-UR9I)
 ### Development Essentials
-- NodeJS v21 [NodeJS Collection](https://github.com/nodesource/distributions#installation-instructions) ```curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs```
+- NodeJS v21 [NodeJS Collection](https://github.com/nodesource/distributions#installation-instructions)
+```
+curl -fsSL https://deb.nodesource.com/setup_21.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+```
 
 
 - npm v8.5.1 `sudo apt install npm`
@@ -113,19 +116,49 @@ docker inspect <network or container or image>
 ### Jira
 - Guide for Integration with Github [Youtube video](https://www.youtube.com/watch?v=u6RsQmlX4j0)
 - How to use Jira as a Developer [YouTube video](https://www.youtube.com/watch?v=pLLH0dVFDvc)
-### Jenkins
+### Jenkins Version 2.440.2
 - [Install and run Jenkins as a Docker image](https://octopus.com/blog/jenkins-docker-install-guide)
-- Jenkins Master on Docker
-  - `docker run -d -p 8080:8080 -p 50000:50000 --name jenkins-master -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins/jenkins:lts-jdk17`
-  - Installation guide on [Octopus](https://octopus.com/blog/jenkins-docker-install-guide)
-  - Docker-in-Docker guide on [Medium](https://medium.com/@yassine.essadraoui_78000/jenkins-docker-in-docker-b7630c7b9364)
-  - Plugins
-    - Docker
-    - Docker Pipeline
-    - Docker Commons 
-- Jenkins Docker Slave Agent
+  - default access:
+    > http://localhost:8080/
+- Build and run a new Jenkins server (as a docker container) using the code below
+    - jenkins_home volume saves Jenkins server's own data (plugins etc)
+    - docker.sock volume and the `which docker` volume make this Jenkins container use the host machine's docker daemon (important for creating docker images via Jenkins
+```
+  docker run -d -p 8080:8080 -p 50000:50000 --name jenkins-master -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins/jenkins:lts-jdk17
+
+```
+- Jenkins plugins (on top of basic plugins upon first activation of Jenkins server)
+  - Docker
+    - For docker cloud. Required if the Jenkins pipeline wants to create delegate ephemeral docker agents to do the building/testing etc.
+  - Docker Pipeline
+  - Docker Commons
+  - Blue Ocean
+    - Only for better visualization of Jenkins pipeline build history
+- Installation guide on [Octopus](https://octopus.com/blog/jenkins-docker-install-guide)
+- Docker-in-Docker guide on [Medium](https://medium.com/@yassine.essadraoui_78000/jenkins-docker-in-docker-b7630c7b9364)
+- Docker Cloud method on Jenkins
+  - Gives Jenkins the ability to use ephemeral (temporary) docker containers as Jenkins agents instead of using the built-in node to do the work
+```
+Docker Cloud Setup steps:
+1. Open Jenkins server and login
+2. Create cloud based on docker
+3. Cloud Details:
+  - Docker Host URI `unix:///var/run/docker.sock`
+  - Docker Hostname `172.17.0.1` (by default)
+  - Enable docker cloud
+  - Enable "Expose DOCKER_HOST"
+4. Docker Agent Templates
+  - Add a label and name (for eg. `docker-agent-1`)
+  - Enable docker template
+  - Docker Image `jenkins/ssh-agent:latest`
+  - Container Settings -> Volumes From: `jenkins-master` (or whatever container name you used for the jenkins Master server)
+  - Usage: `Use Node as much as possible`
+  - Connect Method: `Attach Docker Container`
+  - Pull Strategy: `Pull all images everytime`
+```
+- Jenkins Docker Slave Agent Image
   - `docker pull jenkins/agent` or `docker pull jenkins/ssh-agent`
-  - Docker-in-Docker guide on [Medium](https://medium.com/@yassine.essadraoui_78000/jenkins-docker-in-docker-b7630c7b9364)
+  - Used by Docker Cloud
 - Jenkins Pipeline Syntax [Doc](https://www.jenkins.io/doc/book/pipeline/)
 - Groovy Syntax [Doc](https://groovy-lang.org/syntax.html#_string_interpolation)
 - Docker hostname `host.docker.internal` or `172.17.0.1`
