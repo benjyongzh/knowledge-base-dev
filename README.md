@@ -57,7 +57,17 @@ zrok share reserved <resource/endpoint>
 zrok release <resource/endpoint>
 ```
 
-
+### Portainer v2.19 as a docker container
+Installation Guide from Portainer docs [here](https://docs.portainer.io/start/install-ce/server/docker/wsl).
+1. Create docker volume for Portainer
+```
+docker volume create portainer_data
+```
+2. Install Portainer image and container while using localhost's docker socket
+```
+docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+```
+3. Access Portainer on port 9443 `https://localhost:9443`
 
 ### Bash CLI tools
 `sudo apt install <tool name>`
@@ -204,6 +214,26 @@ Docker Cloud Setup steps:
 - Groovy Syntax [Doc](https://groovy-lang.org/syntax.html#_string_interpolation)
 - Docker hostname `host.docker.internal` or `172.17.0.1`
 - Docker Host URI `unix: ///var/run/docker.sock` based on [Stack Overflow](https://stackoverflow.com/questions/47709208/how-to-find-docker-host-uri-to-be-used-in-jenkins-docker-plugin)
+- Linking gcloud to Jenkins [Youtube Video Instructions](https://www.youtube.com/watch?v=eHtRGc6EMY4&ab_channel=CloudBeesTV)
+
+  - Prerequisites:
+    - JenkinsMaster docker container must have an ENV variable of "GOOGLE_APPLICATION_CREDENTIALS" set to a location of secret manager key (for eg /var/cache/jenkins/gcp-jenkins-project.json)
+
+  1. Install GCP secrets manager plugin on Jenkins
+  2. Set GCP projectname to projectID of gcloud project
+  3. Create service account in gcloud just for jenkins, and give secrets accessor + secrets viewer roles to this new account
+  4. Create private key for service account and save text to /var/cache/jenkins/gcp-jenkins-project.json of Jenkins docker container
+  5. Make sure Jenkins docker container as ENV GOOGLE_APPLICATION_CREDENTIALS point to location of json for private key from step 4
+  6. Restart Jenkins container
+  7. Create new secret in Google Secrets Manager, with label of:
+    jenkins-credentials-type: [string/file/username-password/ssh-user-private-key/certificate] (pick only one out of these 5)
+  8. In secret will appear in Jenkins credentials automatically (Jenkins will get gcloud info every 5mins based on observations)
+  9. In Jenkins pipeline, point an env variable to the new secret by using:
+  ```
+  environment {
+    MY_ENV_BLABLA = credentials('name-of-my-secret-bla-bla')
+  }
+  ```
 
 ### makefile
 `sudo apt install make`
