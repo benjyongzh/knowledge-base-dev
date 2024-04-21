@@ -198,6 +198,12 @@ Docker Cloud Setup steps:
   - Docker Hostname `172.17.0.1` (by default)
   - Enable docker cloud
   - Enable "Expose DOCKER_HOST"
+  - Test Connection.
+    - If no permission, check permissions of /var/run/docker.sock with:
+          ls -l /var/run/docker.sock
+      - If output is srw-rw----, use command below to change it to srw-rw-rw-:
+          sudo chmod 666 /var/run/docker.sock
+      - Test Connection again.
 4. Docker Agent Templates
   - Add a label and name (for eg. `docker-agent-1`)
   - Enable docker template
