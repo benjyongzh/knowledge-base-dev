@@ -208,6 +208,7 @@ Docker Cloud Setup steps:
   - Add a label and name (for eg. `docker-agent-1`)
   - Enable docker template
   - Docker Image `jenkins/ssh-agent:latest`
+  - Remote File System Root: `home/jenkins`
   - Container Settings -> Volumes From: `jenkins-master` (or whatever container name you used for the jenkins Master server)
   - Usage: `Use Node as much as possible`
   - Connect Method: `Attach Docker Container`
