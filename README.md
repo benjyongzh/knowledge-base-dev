@@ -91,6 +91,9 @@ Used for all coding except Java.
 VSCode Extensions:
 - Arrow Function Snippets
 - Atom One Dark Theme
+- Better Comments
+- Bookmarks
+- Error Lens
 - ES7+ React/Redux/React-Native snippets
 - JavaScript (ES6) code snippets
 - Typescript React code snippets
@@ -98,6 +101,7 @@ VSCode Extensions:
 - Vue VSCode Snippets
 - WSL
 - ESLint
+- GitLens
 - Live Server
 - Prettier - Code formatter
 - Prettier ESLint
@@ -105,6 +109,7 @@ VSCode Extensions:
 - Tailwind CSS IntelliSense
 - Todo Tree
 - Vue - Official
+- YAML
 
 ### IntelliJ IDEA Community Edition
 Used for Java.
