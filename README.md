@@ -102,6 +102,7 @@ VSCode Extensions:
 - WSL
 - ESLint
 - GitLens
+- indent-rainbow
 - Live Server
 - Prettier - Code formatter
 - Prettier ESLint
