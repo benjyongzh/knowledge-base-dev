@@ -1,0 +1,2 @@
+This collection of documentation serves as a library to keep track of the developer tools, software and installation guides used by me.
+My current environment can be found [[Current Environment|here]].
