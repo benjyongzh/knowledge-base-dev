@@ -21,6 +21,7 @@ Used for all coding except #java.
 - JavaScript (ES6) code snippets
 - Live Server
 - Markdown All in One
+- Mark Files
 - Path Intellisense
 - Prettier - Code formatter
 - Prettier ESLint
