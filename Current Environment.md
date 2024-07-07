@@ -8,6 +8,7 @@
 - [[Docker Daemon]] on #Ubuntu
 - [[Jira]] browser application
 - [[Jenkins]] as a #docker container
+- Obsidian on WSL2
 ## Environment
 - [[git]] v2.34.1
 - [[NodeJS]] v21
