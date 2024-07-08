@@ -4,6 +4,8 @@
 # How To Use
 - `crontab -e` starts editing of crontab file using a text-based editor (like [[Vim]]).
 - [crontab commands](https://www.hostbillo.com/blog/how-to-display-list-and-view-current-cron-jobs-in-linux/)
+- [Basic Guide](https://www.alibabacloud.com/blog/594117)
+- [Reference Guide](https://www.adminschoice.com/crontab-quick-reference)
 ## Formatting
 Crontabs need to follow a specific format for specifying the schedule of the script running. It comes in the form of 5 numbers `* * * * *` where each number denotes a minute/hour/day etc to run the script:
 
@@ -37,3 +39,4 @@ For a situation where `~` is `/home/admin`, the following cronjob runs `main.py`
 This means that it is important to understand where your script is and where you would want any outputs to be placed.
 ### Resources
 - [Formatter](https://crontab.guru/)
+- [Email Notifications Setup](https://www.baeldung.com/linux/crontab-email-notifications#:~:text=Before%20setting%20up%20a%20crontab,or%20Postfix%20installed%20and%20configured.&text=Once%20installed%2C%20we%20need%20to,screen%20prompts%20for%20its%20configuration.)

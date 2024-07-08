@@ -48,3 +48,6 @@ driver.quit()
 ```
 
 Generally, there are a lot of documentation available online for syntax, examples and use cases.
+
+- [Click a Button on a website](https://uilicious.com/blog/how-to-click-a-button-using-selenium/#:~:text=To%20click%20on%20a%20button%20using%20Selenium%2C%20first%20find%20the,using%20the%20left%20mouse%20button.)
+- 
